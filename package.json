@@ -7,13 +7,12 @@
     "packages/client",
     "packages/server",
     "packages/codegen",
-    "examples/basic/client",
-    "examples/basic/server"
+    "examples/basic"
   ],
   "scripts": {
-    "build": "npm run build --workspaces",
-    "build:basic": "npm run build -w basic-example-client && npm run build -w basic-example-server",
-    "start:basic": "npm run start -w basic-example-server"
+    "build:packages": "npm run build -w @bidirpc/core && npm run build -w @bidirpc/client && npm run build -w @bidirpc/server && npm run build -w @bidirpc/codegen",
+    "dev:basic": "npm run build:packages && npm run dev -w basic-example",
+    "build": "npm run build:packages && npm run build -w basic-example"
   },
   "devDependencies": {
     "tsx": "^4.20.0",

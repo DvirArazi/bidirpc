@@ -1,6 +1,6 @@
 import { connectBidirpcClient } from "@bidirpc/client";
-import { server } from "./generated/server.js";
-import { clientFunctions } from "./remote/client.remote.js";
+import { server } from "./generated/server";
+import { clientFunctions } from "./remote/client.remote";
 
 const clientId = crypto.randomUUID();
 
