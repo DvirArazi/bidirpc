@@ -6,7 +6,7 @@ import {
   type RpcResultMessage
 } from "@bidirpc/core";
 
-export type ServerFunctions = Record<string, (...args: unknown[]) => unknown | Promise<unknown>>;
+export type ServerFunctions = Record<string, (...args: any[]) => unknown | Promise<unknown>>;
 
 export type CreateBidirpcServerOptions = {
   serverFunctions: ServerFunctions;

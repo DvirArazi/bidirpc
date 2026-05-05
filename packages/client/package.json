@@ -1,5 +1,5 @@
 {
-  "name": "@bidirpc/server",
+  "name": "@bidirpc/client",
   "version": "0.0.1",
   "type": "module",
   "main": "./dist/index.js",
@@ -14,6 +14,6 @@
     "build": "tsc"
   },
   "dependencies": {
-    "@bidirpc/core": "0.0.1"
+    "@bidirpc/core": "*"
   }
 }

@@ -7,7 +7,7 @@ import {
   type RpcResultMessage
 } from "@bidirpc/core";
 
-export type ClientFunctions = Record<string, (...args: unknown[]) => unknown | Promise<unknown>>;
+export type ClientFunctions = Record<string, (...args: any[]) => unknown | Promise<unknown>>;
 
 export type CreateServerCallerOptions = {
   url: string;

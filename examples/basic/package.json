@@ -1,19 +1,10 @@
 {
-  "name": "basic",
+  "name": "basic-example",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "concurrently -k -n server,client \"npm:dev:server\" \"npm:dev:client\"",
-    "dev:server": "tsx watch server.ts",
-    "dev:client": "vite --host 0.0.0.0"
-  },
-  "dependencies": {
-    "@bidirpc/client": "0.0.1",
-    "@bidirpc/server": "0.0.1"
-  },
-  "devDependencies": {
-    "@types/node": "^24.0.0",
-    "concurrently": "^9.0.0",
-    "vite": "^7.0.0"
+    "dev:client": "npm run dev -w basic-example-client",
+    "dev:server": "npm run dev -w basic-example-server",
+    "build": "npm run build -w basic-example-client && npm run build -w basic-example-server"
   }
 }

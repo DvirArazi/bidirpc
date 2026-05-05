@@ -3,16 +3,20 @@
   "private": true,
   "type": "module",
   "workspaces": [
-    "packages/*",
-    "examples/*/client",
-    "examples/*/server"
+    "packages/core",
+    "packages/client",
+    "packages/server",
+    "packages/codegen",
+    "examples/basic/client",
+    "examples/basic/server"
   ],
   "scripts": {
     "build": "npm run build --workspaces",
-    "dev:basic": "npm run dev -w examples/basic"
+    "build:basic": "npm run build -w basic-example-client && npm run build -w basic-example-server",
+    "start:basic": "npm run start -w basic-example-server"
   },
   "devDependencies": {
-    "typescript": "^5.9.0",
-    "tsx": "^4.20.0"
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
   }
 }
