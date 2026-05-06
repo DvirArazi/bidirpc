@@ -62,5 +62,5 @@ Thumbs.db
 *.tgz
 
 # Generated bidirpc files
-# examples/**/src/generated/
-# **/src/generated/bidirpc/
+examples/**/src/generated/
+**/src/generated/bidirpc/
